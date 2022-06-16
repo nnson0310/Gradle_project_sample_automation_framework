@@ -1,7 +1,9 @@
 package saucedemo;
 
 import commons.BaseTest;
+import commons.RetryListener;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import pageObjects.saucedemo.InventoryPageObject;
 import pageObjects.saucedemo.LoginPageObject;
@@ -53,22 +55,24 @@ public class TC_01_Sort_Asc_Desc extends BaseTest {
         inventoryPage.sortBySelectDropdown(driver, "Name (A to Z)");
         verifyTrue(inventoryPage.isProductNameSortedAscending(driver));
 
+        Assert.assertTrue(false);
+
     }
 
-    @Test
-    public void TC_02() {
-        inventoryPage.sortBySelectDropdown(driver, "Price (high to low)");
-        verifyTrue(inventoryPage.isProductPriceSortedDescending(driver));
-
-        inventoryPage.sortBySelectDropdown(driver, "Price (low to high)");
-        verifyTrue(inventoryPage.isProductPriceSortedAscending(driver));
-    }
-
-    @Test
-    public void TC_03() {
-        inventoryPage.sortBySelectDropdown(driver, "Price (low to high)");
-        verifyTrue(inventoryPage.isProductPriceSortedAscending(driver));
-    }
+//    @Test
+//    public void TC_02() {
+//        inventoryPage.sortBySelectDropdown(driver, "Price (high to low)");
+//        verifyTrue(inventoryPage.isProductPriceSortedDescending(driver));
+//
+//        inventoryPage.sortBySelectDropdown(driver, "Price (low to high)");
+//        verifyTrue(inventoryPage.isProductPriceSortedAscending(driver));
+//    }
+//
+//    @Test
+//    public void TC_03() {
+//        inventoryPage.sortBySelectDropdown(driver, "Price (low to high)");
+//        verifyTrue(inventoryPage.isProductPriceSortedAscending(driver));
+//    }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {

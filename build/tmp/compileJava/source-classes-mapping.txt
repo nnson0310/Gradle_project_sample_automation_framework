@@ -1,3 +1,5 @@
+commons/RetryFailedTest.java
+ commons.RetryFailedTest
 reportConfig/ExtentReportV5/ExtentManager.java
  reportConfig.ExtentReportV5.ExtentManager
 commons/GlobalConstants.java
@@ -20,6 +22,8 @@ commons/VerificationFailures.java
  commons.VerificationFailures
 reportConfig/AllureTestListener.java
  reportConfig.AllureTestListener
+commons/RetryListener.java
+ commons.RetryListener
 reportConfig/ExtentReportV5/ExtentTestListener.java
  reportConfig.ExtentReportV5.ExtentTestListener
 reportConfig/ReportNGListener.java

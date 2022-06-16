@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="saucedemo.TC_01_Sort_Asc_Desc" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-16T04:23:33" hostname="DESKTOP-M4O9I4R" time="1.651">
+<testsuite name="saucedemo.TC_01_Sort_Asc_Desc" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-16T05:01:28" hostname="DESKTOP-M4O9I4R" time="2.915">
   <properties/>
-  <testcase name="TC_01" classname="saucedemo.TC_01_Sort_Asc_Desc" time="0.808"/>
-  <testcase name="TC_02" classname="saucedemo.TC_01_Sort_Asc_Desc" time="0.692"/>
-  <testcase name="TC_03" classname="saucedemo.TC_01_Sort_Asc_Desc" time="0.118"/>
+  <testcase name="TC_01" classname="saucedemo.TC_01_Sort_Asc_Desc" time="2.915">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at saucedemo.TC_01_Sort_Asc_Desc.TC_01(TC_01_Sort_Asc_Desc.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
   <system-out><![CDATA[Items before sort: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack]
 Items after sort: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack]
 Verification Start
@@ -12,26 +61,14 @@ Items before sort: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt 
 Items after sort: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
 Verification Start
  -------------------------- PASSED -------------------------- 
-Items before sort: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
-Items after sort: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
-Verification Start
- -------------------------- PASSED -------------------------- 
-Items before sort: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Items after sort: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Verification Start
- -------------------------- PASSED -------------------------- 
-Items before sort: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Items after sort: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Verification Start
- -------------------------- PASSED -------------------------- 
 ]]></system-out>
-  <system-err><![CDATA[1655353397500	geckodriver	INFO	Listening on 127.0.0.1:20746
-1655353398146	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\son\\AppData\\Local\\Temp\\rust_mozprofilez8IeC3"
-1655353398584	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\son\\AppData\\Local\\Temp\\rust_mozprofilez8IeC3\\search.json.mozlz4", (void 0)))
-1655353411151	Marionette	INFO	Listening on port 52262
-1655353411219	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Jun 16, 2022 11:23:31 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <system-err><![CDATA[1655355673065	geckodriver	INFO	Listening on 127.0.0.1:23970
+1655355673728	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\son\\AppData\\Local\\Temp\\rust_mozprofileJjh7SP"
+1655355674002	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\son\\AppData\\Local\\Temp\\rust_mozprofileJjh7SP\\search.json.mozlz4", (void 0)))
+1655355675638	Marionette	INFO	Listening on port 53173
+1655355675791	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Jun 16, 2022 12:01:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

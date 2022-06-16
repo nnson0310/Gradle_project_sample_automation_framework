@@ -1,1 +1,0 @@
-{"uuid":"ccd0a3c9-60a2-493c-a27a-6e9dc91a476e","name":"saucedemo","children":["1c512913-d2a0-4baa-840f-c6ba28a863fb"],"befores":[{"name":"deleteAllureReport","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1655353396529,"stop":1655353396558}],"afters":[],"links":[],"start":1655353396517,"stop":1655353416021}
