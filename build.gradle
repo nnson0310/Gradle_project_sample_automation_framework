@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+}
+
+group 'nopcomerce.gradle'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    implementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    testImplementation group: 'org.uncommons', name: 'reportng', version: '1.1.4'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.2.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.2'
+    implementation group: 'com.aventstack', name: 'extentreports', version: '4.0.9'
+    implementation group: 'joda-time', name: 'joda-time', version: '2.10.10'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.16'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.24'
+    implementation group: 'velocity', name: 'velocity-dep', version: '1.4'
+    implementation group: 'com.google.inject', name: 'guice', version: '4.1.0'
+    implementation group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.5'
+    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.10'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useTestNG(){
+        suites 'src/test/resources/RunSauceDemo.xml'
+        outputDirectory = file("$projectDir/reportng-output")
+    }
+
+    testLogging{
+        showStandardStreams = true
+    }
+
+    systemProperty "file.encoding", "utf-8"
+    reports.html.setDestination(file("$projectDir/gradle-report"))
+
+}
